@@ -1,0 +1,12 @@
+<SCRIPT ID="vertex-shader" TYPE="x-shader/x-vertex">
+  uniform float time;
+  void main()
+  {
+  vec3 posChanged = position;
+  posChanged.x = posChanged.x*(abs(sin(time*1.0)));
+  posChanged.y = posChanged.y*(abs(cos(time*1.0)));
+  posChanged.z = posChanged.z*(abs(sin(time*1.0)));
+
+  gl_position = projectionMatrix * modelViewMatrix * vec(posChanged, 1.0);
+  }
+</SCRIPT>
