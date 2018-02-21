@@ -66,7 +66,7 @@ var buildCharacter = (function() {
  
   return function() {
     var g = getPlaneGeometry();
-      var creatureImage = textureLoader.load('http://localhost/cs423/textures/texture.png');
+      var creatureImage = textureLoader.load('http://localhost/cs423/assets/textures/texture.png');
     creatureImage.magFilter = THREE.NearestFilter;
  
     var mat = new THREE.ShaderMaterial({
